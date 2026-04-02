@@ -1,0 +1,494 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #1B2838;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  line-height: 1.75;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+@layer components {
+  .btn-large {
+    @apply px-6 py-4 text-lg font-medium rounded-xl transition-colors;
+    min-height: 52px;
+  }
+}
+
+/* =============================================================================
+   Landing Page Styles
+   ============================================================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.reveal-stagger.revealed > *:nth-child(1) { transition-delay: 0ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.revealed > *:nth-child(2) { transition-delay: 100ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.revealed > *:nth-child(3) { transition-delay: 200ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.revealed > *:nth-child(4) { transition-delay: 300ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.revealed > *:nth-child(5) { transition-delay: 400ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.revealed > *:nth-child(6) { transition-delay: 500ms; opacity: 1; transform: translateY(0); }
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(91, 154, 139, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91, 154, 139, 0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: gridPulse 4s ease-in-out infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #5B9A8B 0%, #2dd4bf 50%, #5B9A8B 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 8s ease-in-out infinite;
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: glow 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.landing-card {
+  @apply bg-white border border-gray-200 rounded-2xl transition-all duration-300;
+}
+
+.landing-card:hover {
+  @apply border-primary-300 shadow-lg;
+  transform: translateY(-2px);
+}
+
+.landing-card-dark {
+  @apply bg-navy-800/50 border border-navy-700/50 rounded-2xl backdrop-blur-sm transition-all duration-300;
+}
+
+.landing-card-dark:hover {
+  @apply border-primary-500/30;
+  box-shadow: 0 0 30px rgba(91, 154, 139, 0.1);
+}
+
+.stat-number {
+  @apply font-bold tracking-tight;
+  font-variant-numeric: tabular-nums;
+}
+
+.section-divider {
+  @apply mx-auto;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #5B9A8B, #2dd4bf);
+  border-radius: 2px;
+}
+
+.logo-carousel-wrapper {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logo-carousel {
+  display: flex;
+  width: max-content;
+  animation: logoScroll 30s linear infinite;
+}
+
+.logo-carousel:hover {
+  animation-play-state: paused;
+}
+
+.logo-carousel-item {
+  flex-shrink: 0;
+  min-width: 180px;
+}
+
+@keyframes logoScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* =============================================================================
+   "How It Works" — AI Engine Animations
+   ============================================================================= */
+
+.ai-engine-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #5B9A8B;
+  box-shadow: 0 0 8px rgba(91, 154, 139, 0.6), 0 0 20px rgba(91, 154, 139, 0.3);
+  pointer-events: none;
+}
+
+.neural-grid {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.neural-dot {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(91, 154, 139, 0.12);
+}
+
+.scan-beam {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(91, 154, 139, 0.08) 30%,
+    rgba(45, 212, 191, 0.15) 50%,
+    rgba(91, 154, 139, 0.08) 70%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.ai-engine-glow {
+  border: 1px solid rgba(91, 154, 139, 0.2);
+  border-radius: 1.5rem;
+}
+
+.data-stream-line {
+  position: absolute;
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    180deg,
+    transparent 0px,
+    transparent 8px,
+    rgba(91, 154, 139, 0.15) 8px,
+    rgba(91, 154, 139, 0.15) 16px
+  );
+  background-size: 1px 40px;
+  pointer-events: none;
+}
+
+.flow-connector {
+  width: 2px;
+  height: 80px;
+  margin: 0 auto;
+  background: repeating-linear-gradient(
+    180deg,
+    transparent 0px,
+    transparent 6px,
+    rgba(91, 154, 139, 0.4) 6px,
+    rgba(91, 154, 139, 0.4) 14px
+  );
+  background-size: 2px 40px;
+}
+
+.flow-connector-arrow {
+  width: 0;
+  height: 0;
+  margin: 0 auto;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid rgba(91, 154, 139, 0.5);
+}
+
+.pipeline-step-glow {
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.gold-accent-card {
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.gold-accent-card:hover {
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.1);
+}
+
+.flow-arrow-h {
+  height: 3px;
+  flex: 1;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    transparent 6px,
+    rgba(91, 154, 139, 0.5) 6px,
+    rgba(91, 154, 139, 0.5) 14px
+  );
+  background-size: 40px 3px;
+}
+
+.flow-arrow-h-head {
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 12px solid rgba(91, 154, 139, 0.5);
+}
+
+.flow-arrow-h-label {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+/* =============================================================================
+   Refinery Process Diagram — Animated SVG Styles
+   ============================================================================= */
+
+.refinery-hidden {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.refinery-revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.refinery-pipe-group.refinery-hidden {
+  opacity: 0;
+}
+
+.refinery-pipe-group.refinery-revealed {
+  opacity: 1;
+  transition: opacity 1.2s ease-out;
+}
+
+.refinery-unit {
+  cursor: pointer;
+  outline: none;
+}
+
+.refinery-unit-active {
+  stroke: rgba(91, 154, 139, 0.7) !important;
+  fill: rgba(91, 154, 139, 0.08) !important;
+}
+
+.refinery-unit-label {
+  fill: rgba(255, 255, 255, 0.55);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+  transition: fill 0.3s;
+}
+
+.refinery-unit:hover .refinery-unit-label,
+.refinery-unit:focus .refinery-unit-label {
+  fill: rgba(255, 255, 255, 0.95);
+}
+
+.refinery-pipe {
+  animation: pipeFlow 2s linear infinite;
+}
+
+@keyframes pipeFlow {
+  0% { stroke-dashoffset: 32; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.refinery-h2-particle {
+  filter: url(#glow4);
+}
+
+.refinery-flow-label {
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 8px currentColor;
+}
+
+.refinery-heat-glow {
+  animation: heatPulse 2s ease-in-out infinite;
+}
+
+@keyframes heatPulse {
+  0%, 100% { stroke-opacity: 0.15; filter: blur(0px); }
+  50% { stroke-opacity: 0.4; filter: blur(1px); }
+}
+
+@keyframes reactorGlow {
+  0%, 100% { opacity: 0.05; r: 8; }
+  50% { opacity: 0.2; r: 14; }
+}
+
+@keyframes flameFlicker {
+  0%, 100% { opacity: 0.6; transform: scaleY(1); }
+  25% { opacity: 0.9; transform: scaleY(1.15); }
+  50% { opacity: 0.7; transform: scaleY(0.95); }
+  75% { opacity: 0.95; transform: scaleY(1.1); }
+}
+
+@keyframes steamRise {
+  0% { opacity: 0.25; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-40px) scale(2); }
+}
+
+@keyframes liquidLevel {
+  0%, 100% { height: 45%; y: 55%; }
+  50% { height: 60%; y: 40%; }
+}
+
+@keyframes particleFlow {
+  0% { offset-distance: 0%; }
+  100% { offset-distance: 100%; }
+}
+
+/* =============================================================================
+   Reduced Motion Support
+   ============================================================================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .hero-grid,
+  .gradient-text,
+  .logo-carousel {
+    animation: none !important;
+  }
+
+  .ai-engine-particle,
+  .scan-beam,
+  .data-stream-line,
+  .flow-connector,
+  .flow-arrow-h,
+  .neural-dot {
+    animation: none !important;
+    opacity: 0.15 !important;
+  }
+
+  .ai-engine-glow {
+    animation: none !important;
+  }
+
+  .refinery-pipe {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+
+  .refinery-hidden {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .refinery-flow-label {
+    opacity: 0.5 !important;
+  }
+
+  .refinery-heat-glow {
+    stroke-opacity: 0.2 !important;
+  }
+
+  svg ellipse,
+  svg circle,
+  svg polygon,
+  svg rect {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="spiralGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7CB69D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A8B7C;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="spiralGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5B9A8B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3D7A6C;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="spiralGrad3" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#8FCDB5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5B9A8B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Spiral/Swirl Icon centered -->
+  <g transform="translate(50, 50)">
+    <!-- Three curved petals forming a spiral -->
+    <path d="M0,-35 Q28,-35 35,0 Q35,28 0,35 Q-14,21 0,0 Q7,-14 0,-35" fill="url(#spiralGrad1)" opacity="0.9"/>
+    <path d="M35,0 Q35,28 0,35 Q-28,35 -35,0 Q-21,-14 0,0 Q14,7 35,0" fill="url(#spiralGrad2)" opacity="0.85"/>
+    <path d="M0,35 Q-28,35 -35,0 Q-35,-28 0,-35 Q14,-21 0,0 Q-7,14 0,35" fill="url(#spiralGrad3)" opacity="0.8"/>
+  </g>
+</svg>
