@@ -108,7 +108,7 @@ export default function RefineryProcessSection() {
                 })}
               </g>
 
-              {/* ═══ R2E AI ORCHESTRATOR (Above Value Chain) ═══ */}
+              {/* ═══ Optamax ORCHESTRATOR (Above Value Chain) ═══ */}
               <g className={`transition-all duration-700 ${visibleCount > 0 ? "opacity-100" : "opacity-0"}`}>
                 {/* Outer pulse ring */}
                 <circle cx={550} cy={70} r={55} fill="none" stroke="url(#brainGrad)" strokeWidth="0.5" strokeOpacity="0.08">
@@ -160,7 +160,7 @@ export default function RefineryProcessSection() {
                 </circle>
                 
                 {/* Labels */}
-                <text x={550} y={66} textAnchor="middle" fill="white" fontSize="10" fontWeight="700">R2E AI</text>
+                <text x={550} y={66} textAnchor="middle" fill="white" fontSize="10" fontWeight="700">Optamax</text>
                 <text x={550} y={78} textAnchor="middle" fill="#5B9A8B" fontSize="7" fontWeight="600">ORCHESTRATOR</text>
               </g>
 

@@ -3,16 +3,16 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
-const siteUrl = "https://ai.r2egroup.com";
-const siteName = "R2E AI";
-const siteTitle = "R2E AI | The Energy Operating System";
+const siteUrl = "https://optamax.ai";
+const siteName = "Optamax";
+const siteTitle = "Optamax | The Energy Operating System";
 const siteDescription =
-  "AI-powered decision intelligence for downstream refinery operations. R2E Group converts 20+ years of elite energy advisory expertise into an on-demand operating system — delivering billions in margin lift across clients worldwide.";
+  "AI-powered decision intelligence for downstream refinery operations. Optamax converts 20+ years of elite energy advisory expertise into an on-demand operating system — delivering billions in margin lift across clients worldwide.";
 
 export const metadata: Metadata = {
   title: {
     default: siteTitle,
-    template: "%s | R2E AI",
+    template: "%s | Optamax",
   },
   description: siteDescription,
   metadataBase: new URL(siteUrl),
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "operational excellence",
     "hydrocarbon accounting",
     "blending optimization",
-    "R2E Group",
+    "Optamax",
     "refinery planning",
     "constraint management",
     "value chain transformation",
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     "energy advisory",
   ],
 
-  authors: [{ name: "R2E Group", url: "https://r2egroup.com" }],
-  creator: "R2E Group",
-  publisher: "R2E Group",
+  authors: [{ name: "Optamax", url: "https://optamax.ai" }],
+  creator: "Optamax",
+  publisher: "Optamax",
 
   robots: {
     index: true,
@@ -68,10 +68,10 @@ export const metadata: Metadata = {
     description: siteDescription,
     images: [
       {
-        url: `${siteUrl}/r2e-group-logo.png`,
+        url: `${siteUrl}/optamax-logo.png`,
         width: 937,
         height: 546,
-        alt: "R2E AI - The Energy Operating System",
+        alt: "Optamax - The Energy Operating System",
         type: "image/png",
       },
     ],
@@ -81,9 +81,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
-    images: [`${siteUrl}/r2e-group-logo.png`],
-    creator: "@R2EGroup",
-    site: "@R2EGroup",
+    images: [`${siteUrl}/optamax-logo.png`],
+    creator: "@Optamax",
+    site: "@Optamax",
   },
 
   icons: {

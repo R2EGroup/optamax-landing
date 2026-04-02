@@ -246,7 +246,7 @@ export default function AIAgentsFlowSection() {
                 </circle>
 
                 {/* Brain label */}
-                <text x={500} y={216} textAnchor="middle" fill="white" fontSize="11" fontWeight="700">R2E AI</text>
+                <text x={500} y={216} textAnchor="middle" fill="white" fontSize="11" fontWeight="700">Optamax</text>
                 <text x={500} y={230} textAnchor="middle" fill="#5B9A8B" fontSize="8" fontWeight="600">ORCHESTRATOR</text>
               </g>
 
@@ -386,7 +386,7 @@ export default function AIAgentsFlowSection() {
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-navy-800 border-2 border-primary-500/30 relative">
               <div className="absolute inset-0 rounded-full border border-primary-500/15 animate-ping" style={{ animationDuration: "3s" }} />
               <div className="text-center">
-                <div className="text-sm font-bold text-white">R2E AI</div>
+                <div className="text-sm font-bold text-white">Optamax</div>
                 <div className="text-[9px] text-primary-400">Orchestrator</div>
               </div>
             </div>

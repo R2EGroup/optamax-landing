@@ -254,7 +254,7 @@ export default function Refinery101Section() {
           <div className="section-divider mb-6" />
           <h2 className="text-4xl lg:text-6xl font-black text-white mb-5">How a Refinery Works</h2>
           <p className="text-white/50 max-w-3xl mx-auto text-lg lg:text-xl leading-relaxed">
-            Crude oil flows through four stages of transformation — from raw material to the fuels that power the world. This is the system R2E optimizes.
+            Crude oil flows through four stages of transformation — from raw material to the fuels that power the world. This is the system Optamax optimizes.
           </p>
         </div>
 

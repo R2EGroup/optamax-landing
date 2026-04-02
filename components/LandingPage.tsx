@@ -121,12 +121,12 @@ export default function LandingPage() {
             "@graph": [
               {
                 "@type": "Organization",
-                "@id": "https://r2egroup.com/#organization",
-                name: "R2E Group",
-                url: "https://r2egroup.com",
-                logo: "https://r2egroup.com/wp-content/uploads/2022/08/2.png",
+                "@id": "https://optamax.ai/#organization",
+                name: "Optamax",
+                url: "https://optamax.ai",
+                logo: "https://optamax.ai/optamax-logo.png",
                 description:
-                  "R2E Group is a global energy advisory firm founded in 2005. Advisors average 25+ years of experience in oil & gas operations, strategy, consulting, and executive management.",
+                  "Optamax is a global energy advisory firm founded in 2005. Advisors average 25+ years of experience in oil & gas operations, strategy, consulting, and executive management.",
                 foundingDate: "2005",
                 address: {
                   "@type": "PostalAddress",
@@ -139,23 +139,23 @@ export default function LandingPage() {
                 contactPoint: {
                   "@type": "ContactPoint",
                   telephone: "+1-281-220-1083",
-                  email: "contact@r2egroup.com",
+                  email: "contact@optamax.ai",
                   contactType: "sales",
                 },
                 sameAs: [
-                  "https://www.linkedin.com/company/r2e-group",
-                  "https://www.youtube.com/channel/UCva7Y_ARHlIULybCqdo3LJg",
+                  "https://www.linkedin.com/company/optamax",
+                  "https://www.linkedin.com/company/optamax",
                 ],
               },
               {
                 "@type": "SoftwareApplication",
-                name: "R2E AI",
+                name: "Optamax",
                 applicationCategory: "BusinessApplication",
                 operatingSystem: "Web",
                 description:
                   "AI-powered decision intelligence platform for downstream refinery operations. Converts 20+ years of elite energy advisory expertise into on-demand operational intelligence.",
-                url: "https://ai.r2egroup.com",
-                provider: { "@id": "https://r2egroup.com/#organization" },
+                url: "https://optamax.ai",
+                provider: { "@id": "https://optamax.ai/#organization" },
                 offers: {
                   "@type": "Offer",
                   price: "0",
@@ -165,35 +165,35 @@ export default function LandingPage() {
               },
               {
                 "@type": "WebSite",
-                url: "https://ai.r2egroup.com",
-                name: "R2E AI",
-                publisher: { "@id": "https://r2egroup.com/#organization" },
+                url: "https://optamax.ai",
+                name: "Optamax",
+                publisher: { "@id": "https://optamax.ai/#organization" },
               },
               {
                 "@type": "FAQPage",
                 mainEntity: [
                   {
                     "@type": "Question",
-                    name: "What is R2E AI?",
+                    name: "What is Optamax?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "R2E AI is the Refinery Operating System — an AI-powered decision intelligence platform that converts 20+ years of elite refinery advisory expertise into on-demand operational intelligence for downstream operations.",
+                      text: "Optamax is the Refinery Operating System — an AI-powered decision intelligence platform that converts 20+ years of elite refinery advisory expertise into on-demand operational intelligence for downstream operations.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "How does R2E AI improve refinery operations?",
+                    name: "How does Optamax improve refinery operations?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "R2E AI ingests unstructured refinery data, maps it to proven decision frameworks developed over decades, executes decisions with human-in-the-loop control, and continuously learns from live production outcomes.",
+                      text: "Optamax ingests unstructured refinery data, maps it to proven decision frameworks developed over decades, executes decisions with human-in-the-loop control, and continuously learns from live production outcomes.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "What results has R2E Group delivered?",
+                    name: "What results has Optamax delivered?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "R2E Group has delivered billions in operational margin lift across clients, including $500M+/yr in manufacturing transformation, $300M+/yr in value chain transformation, and $200M+ in inventory optimization.",
+                      text: "Optamax has delivered billions in operational margin lift across clients, including $500M+/yr in manufacturing transformation, $300M+/yr in value chain transformation, and $200M+ in inventory optimization.",
                     },
                   },
                 ],
@@ -219,8 +219,8 @@ export default function LandingPage() {
           >
             <div className="h-10 flex items-center">
               <Image
-                src="/r2e-group-logo.png"
-                alt="R2E AI"
+                src="/optamax-logo.png"
+                alt="Optamax"
                 width={100}
                 height={58}
                 priority
@@ -241,7 +241,7 @@ export default function LandingPage() {
               </button>
             ))}
             <a
-              href="https://ai.r2egroup.com/login"
+              href="https://app.optamax.ai/login"
               className="ml-2 px-5 py-2 rounded-lg bg-primary-500 text-white text-sm font-semibold hover:bg-primary-600 transition-colors"
             >
               Sign In
@@ -274,7 +274,7 @@ export default function LandingPage() {
               </button>
             ))}
             <a
-              href="https://ai.r2egroup.com/login"
+              href="https://app.optamax.ai/login"
               className="block w-full text-center px-5 py-3 rounded-lg bg-primary-500 text-white font-semibold"
             >
               Sign In
@@ -309,8 +309,8 @@ export default function LandingPage() {
         <div className="relative z-10 max-w-4xl mx-auto text-center px-6 py-32">
           <div className="mb-8 flex justify-center">
             <Image
-              src="/r2e-group-logo.png"
-              alt="R2E"
+              src="/optamax-logo.png"
+              alt="Optamax"
               width={220}
               height={128}
               priority
@@ -330,13 +330,13 @@ export default function LandingPage() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
             <a
-              href="mailto:contact@r2egroup.com"
+              href="mailto:contact@optamax.ai"
               className="px-8 py-4 rounded-xl bg-primary-500 hover:bg-primary-600 text-white font-semibold text-lg transition-colors flex items-center gap-2"
             >
               Schedule a Demo <ArrowRight size={18} />
             </a>
             <a
-              href="https://ai.r2egroup.com/login"
+              href="https://app.optamax.ai/login"
               className="px-8 py-4 rounded-xl border-2 border-white/30 hover:border-white/60 text-white font-semibold text-lg transition-colors"
             >
               Sign In
@@ -479,7 +479,7 @@ export default function LandingPage() {
               <div className="flow-connector-arrow" />
             </div>
 
-            {/* ────── CENTER COLUMN: R2E AI ENGINE ────── */}
+            {/* ────── CENTER COLUMN: Optamax ENGINE ────── */}
             <div className="reveal-scale relative">
               <div className="ai-engine-glow animate-border-glow relative overflow-hidden bg-navy-950/80 p-6 lg:p-10">
 
@@ -540,10 +540,10 @@ export default function LandingPage() {
                   />
                 ))}
 
-                {/* R2E AI Title */}
+                {/* Optamax Title */}
                 <div className="relative z-10 text-center mb-8">
                   <h3 className="text-5xl lg:text-7xl font-black gradient-text mb-2">
-                    R2E AI
+                    Optamax
                   </h3>
                   <p className="text-primary-400/80 text-base lg:text-lg font-semibold tracking-wide">
                     Industry-Leading Refinery Intelligence
@@ -579,7 +579,7 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                {/* The R2E Intelligence */}
+                {/* The Optamax Intelligence */}
                 <div className="relative z-10">
                   <div className="landing-card-dark p-5">
                     <div className="flex items-center gap-2.5 mb-3">
@@ -706,7 +706,7 @@ export default function LandingPage() {
             </h2>
             <p className="text-white/50 max-w-2xl mx-auto mt-4">
               From crude selection to wholesale marketing — the same expertise
-              R2E has deployed across hundreds of engagements, now available
+              Optamax has deployed across hundreds of engagements, now available
               as an AI-powered platform.
             </p>
           </div>
@@ -952,10 +952,10 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* R2E delivers */}
+            {/* Optamax delivers */}
             <div className="reveal-right">
               <h3 className="text-lg font-semibold text-navy-900 mb-1">
-                With R2E AI
+                With Optamax
               </h3>
               <div className="w-12 h-0.5 bg-primary-500 mb-6" />
               <div className="space-y-4">
@@ -1097,7 +1097,7 @@ export default function LandingPage() {
       </section>
 
       {/* ================================================================
-          WHAT R2E IS — ABOUT
+          WHAT OPTAMAX IS — ABOUT
           ================================================================ */}
       <section id="about" className="py-20 lg:py-28 bg-navy-900 text-white">
         <div className="max-w-6xl mx-auto px-6">
@@ -1105,20 +1105,20 @@ export default function LandingPage() {
             {/* Left copy */}
             <div className="reveal-left">
               <p className="text-xs font-bold tracking-widest uppercase text-primary-400 mb-3">
-                About R2E
+                About Optamax
               </p>
               <div className="section-divider mb-8 !mx-0" />
               <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
                 From Elite Advisory to AI-Powered Operations
               </h2>
               <p className="text-white/60 mb-4 leading-relaxed">
-                Founded in 2005, R2E Group has spent two decades helping the
+                Founded in 2005, Optamax has spent two decades helping the
                 world&rsquo;s largest energy and petrochemical companies optimize
                 every link in the hydrocarbon value chain — from wellhead to
                 wholesale marketing.
               </p>
               <p className="text-white/60 mb-6 leading-relaxed">
-                Now, R2E AI converts that proven expertise into a decision
+                Now, Optamax converts that proven expertise into a decision
                 intelligence platform deployed directly into live refinery
                 operations. Our advisors average 25+ years of hands-on
                 experience in oil &amp; gas operations, strategy, and executive
@@ -1126,7 +1126,7 @@ export default function LandingPage() {
                 recommendation the platform delivers.
               </p>
               <blockquote className="border-l-4 border-primary-500 pl-5 text-white/70 italic text-lg">
-                &ldquo;R2E has delivered billions in operational margin lift
+                &ldquo;Optamax has delivered billions in operational margin lift
                 across clients worldwide. We operate where small decisions move
                 hundreds of millions of dollars.&rdquo;
               </blockquote>
@@ -1174,17 +1174,17 @@ export default function LandingPage() {
       </section>
 
       {/* ================================================================
-          WHY R2E
+          WHY OPTAMAX
           ================================================================ */}
       <section id="why" className="py-20 lg:py-28 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="reveal text-center mb-14">
             <p className="text-xs font-bold tracking-widest uppercase text-primary-500 mb-3">
-              Why R2E
+              Why Optamax
             </p>
             <div className="section-divider mb-6" />
             <h2 className="text-3xl lg:text-5xl font-bold text-navy-900">
-              Why Energy Companies Choose R2E
+              Why Energy Companies Choose Optamax
             </h2>
           </div>
 
@@ -1222,7 +1222,7 @@ export default function LandingPage() {
 
           <blockquote className="reveal max-w-3xl mx-auto border-l-4 border-primary-500 pl-6">
             <p className="text-lg text-navy-700 italic leading-relaxed">
-              &ldquo;R2E Group helps clients achieve uncommon results — fast.
+              &ldquo;Optamax helps clients achieve uncommon results — fast.
               Our unique delivery model brings just the right professionals to
               you at the right time, working discreetly and effectively with
               your team.&rdquo;
@@ -1370,19 +1370,19 @@ export default function LandingPage() {
                 <br className="hidden sm:block" /> with decision-grade intelligence.
               </h2>
               <p className="text-white/50 max-w-xl mx-auto mb-10">
-                See how R2E AI can transform your refinery&rsquo;s planning,
+                See how Optamax can transform your refinery&rsquo;s planning,
                 optimization, and day-to-day decision-making.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="mailto:contact@r2egroup.com"
+                  href="mailto:contact@optamax.ai"
                   className="px-8 py-4 rounded-xl bg-primary-500 hover:bg-primary-600 text-white font-semibold text-lg transition-colors flex items-center gap-2"
                 >
                   Schedule a Demo <ArrowRight size={18} />
                 </a>
                 <a
-                  href="https://ai.r2egroup.com/login"
+                  href="https://app.optamax.ai/login"
                   className="px-8 py-4 rounded-xl border-2 border-white/30 hover:border-white/60 text-white font-semibold text-lg transition-colors"
                 >
                   Sign In
@@ -1397,7 +1397,7 @@ export default function LandingPage() {
           <div className="max-w-7xl mx-auto px-6 py-8">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-sm text-white/40">
               <div>
-                <p className="text-white/60 font-medium mb-1">R2E Group</p>
+                <p className="text-white/60 font-medium mb-1">Optamax</p>
                 <p>2245 Texas Drive, Suite 300</p>
                 <p>Sugar Land, Texas 77479</p>
                 <p className="mt-1">
@@ -1405,14 +1405,14 @@ export default function LandingPage() {
                     +1.281.220.1083
                   </a>
                   {" "}|{" "}
-                  <a href="mailto:contact@r2egroup.com" className="hover:text-white/70 transition-colors">
-                    contact@r2egroup.com
+                  <a href="mailto:contact@optamax.ai" className="hover:text-white/70 transition-colors">
+                    contact@optamax.ai
                   </a>
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-                <a href="https://r2egroup.com" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors">
-                  r2egroup.com
+                <a href="https://optamax.ai" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors">
+                  optamax.ai
                 </a>
                 <a href="#" className="hover:text-white/70 transition-colors">
                   Privacy Policy
@@ -1423,7 +1423,7 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="mt-6 pt-6 border-t border-white/5 text-xs text-white/30">
-              &copy; 2026 R2E Group. All rights reserved.
+              &copy; 2026 Optamax. All rights reserved.
             </div>
           </div>
         </div>
