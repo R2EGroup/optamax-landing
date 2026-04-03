@@ -100,23 +100,23 @@ export default function AIAgentsFlowSection() {
                   </feMerge>
                 </filter>
                 <linearGradient id="brain-gradient" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stopColor="#5B9A8B" />
+                  <stop offset="0%" stopColor="#172b56" />
                   <stop offset="100%" stopColor="#3b82f6" />
                 </linearGradient>
                 <linearGradient id="flow-down" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.6" />
-                  <stop offset="100%" stopColor="#5B9A8B" stopOpacity="0.6" />
+                  <stop offset="100%" stopColor="#172b56" stopOpacity="0.6" />
                 </linearGradient>
                 <linearGradient id="flow-up" x1="0" y1="1" x2="0" y2="0">
-                  <stop offset="0%" stopColor="#5B9A8B" stopOpacity="0.6" />
+                  <stop offset="0%" stopColor="#172b56" stopOpacity="0.6" />
                   <stop offset="100%" stopColor="#22c55e" stopOpacity="0.6" />
                 </linearGradient>
                 <linearGradient id="aaf-scanGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#5B9A8B" stopOpacity="0" />
-                  <stop offset="30%" stopColor="#5B9A8B" stopOpacity="0.12" />
+                  <stop offset="0%" stopColor="#172b56" stopOpacity="0" />
+                  <stop offset="30%" stopColor="#172b56" stopOpacity="0.12" />
                   <stop offset="50%" stopColor="#3b82f6" stopOpacity="0.2" />
-                  <stop offset="70%" stopColor="#5B9A8B" stopOpacity="0.12" />
-                  <stop offset="100%" stopColor="#5B9A8B" stopOpacity="0" />
+                  <stop offset="70%" stopColor="#172b56" stopOpacity="0.12" />
+                  <stop offset="100%" stopColor="#172b56" stopOpacity="0" />
                 </linearGradient>
               </defs>
 
@@ -126,7 +126,7 @@ export default function AIAgentsFlowSection() {
                   const dotX = 60 + (i % 8) * 125;
                   const dotY = 30 + Math.floor(i / 8) * 200;
                   return (
-                    <circle key={`bg-${i}`} cx={dotX} cy={dotY} r="1.5" fill="#5B9A8B" opacity="0.06">
+                    <circle key={`bg-${i}`} cx={dotX} cy={dotY} r="1.5" fill="#172b56" opacity="0.06">
                       <animate attributeName="opacity" values="0.03;0.12;0.03" dur={`${3 + (i % 5) * 0.4}s`} repeatCount="indefinite" begin={`${i * 0.25}s`} />
                       <animate attributeName="r" values="1;2.5;1" dur={`${3 + (i % 5) * 0.4}s`} repeatCount="indefinite" begin={`${i * 0.25}s`} />
                     </circle>
@@ -219,7 +219,7 @@ export default function AIAgentsFlowSection() {
                   const x2 = 500 + Math.cos(a2) * 28;
                   const y2 = 220 + Math.sin(a2) * 28;
                   return (
-                    <line key={`cross-${i}`} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#5B9A8B" strokeWidth="0.5" strokeOpacity="0.12" strokeDasharray="2 3">
+                    <line key={`cross-${i}`} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#172b56" strokeWidth="0.5" strokeOpacity="0.12" strokeDasharray="2 3">
                       <animate attributeName="strokeOpacity" values="0.06;0.18;0.06" dur={`${3 + i * 0.5}s`} repeatCount="indefinite" />
                     </line>
                   );
@@ -232,8 +232,8 @@ export default function AIAgentsFlowSection() {
                   const y = 220 + Math.sin(angle) * 28;
                   return (
                     <g key={i}>
-                      <line x1={500} y1={220} x2={x} y2={y} stroke="#5B9A8B" strokeWidth="1" strokeOpacity="0.3" />
-                      <circle cx={x} cy={y} r="3" fill="#5B9A8B" opacity="0.5">
+                      <line x1={500} y1={220} x2={x} y2={y} stroke="#172b56" strokeWidth="1" strokeOpacity="0.3" />
+                      <circle cx={x} cy={y} r="3" fill="#172b56" opacity="0.5">
                         <animate attributeName="opacity" values="0.3;0.7;0.3" dur={`${2 + i * 0.2}s`} repeatCount="indefinite" />
                       </circle>
                     </g>
@@ -247,7 +247,7 @@ export default function AIAgentsFlowSection() {
 
                 {/* Brain label */}
                 <text x={500} y={216} textAnchor="middle" fill="white" fontSize="11" fontWeight="700">Optamax</text>
-                <text x={500} y={230} textAnchor="middle" fill="#5B9A8B" fontSize="8" fontWeight="600">ORCHESTRATOR</text>
+                <text x={500} y={230} textAnchor="middle" fill="#172b56" fontSize="8" fontWeight="600">ORCHESTRATOR</text>
               </g>
 
               {/* ═══ FLOW LINES: BRAIN → AGENTS (3-layer pipes) ═══ */}
@@ -418,7 +418,7 @@ export default function AIAgentsFlowSection() {
           {[
             { title: "Real-time Ingestion", desc: "Continuous data flow from all business systems", color: "#f59e0b" },
             { title: "Specialized Agents", desc: "Domain experts for each value chain stage", color: "#f97316" },
-            { title: "Central Orchestration", desc: "Cross-functional insights and coordination", color: "#5B9A8B" },
+            { title: "Central Orchestration", desc: "Cross-functional insights and coordination", color: "#172b56" },
             { title: "Actionable Outputs", desc: "Quantified impact with clear recommendations", color: "#22c55e" },
           ].map((feature, i) => (
             <div key={feature.title} className={`reveal group relative p-6 rounded-2xl bg-navy-800/20 border border-white/5 transition-all duration-500 hover:border-white/15 hover:-translate-y-2 hover:shadow-2xl`} style={{ transitionDelay: `${i * 100}ms` }}>

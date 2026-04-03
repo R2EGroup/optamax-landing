@@ -10,7 +10,7 @@ const STAGES = [
     accent: "text-primary-400",
     bg: "bg-primary-500/10",
     border: "border-primary-500/20",
-    glow: "#5B9A8B",
+    glow: "#172b56",
   },
   {
     number: 2,
@@ -100,11 +100,11 @@ export default function Refinery101Section() {
       case "dht":
         return (
           <g>
-            <ellipse cx={x + 6} cy={cy} rx={6} ry={h * 0.35} fill="url(#r101-reactorGrad)" stroke="rgba(91,154,139,0.2)" strokeWidth={0.8} />
-            <rect x={x + 6} y={y + 4} width={w - 12} height={h - 8} rx={2} fill="url(#r101-reactorGrad)" stroke={isActive ? "rgba(91,154,139,0.7)" : "rgba(91,154,139,0.2)"} strokeWidth={isActive ? 1.5 : 0.8} filter={isActive ? "url(#r101-glow8)" : undefined} className="transition-all duration-300" />
-            <ellipse cx={x + w - 6} cy={cy} rx={6} ry={h * 0.35} fill="url(#r101-reactorGrad)" stroke="rgba(91,154,139,0.2)" strokeWidth={0.8} />
+            <ellipse cx={x + 6} cy={cy} rx={6} ry={h * 0.35} fill="url(#r101-reactorGrad)" stroke="rgba(23,43,86,0.2)" strokeWidth={0.8} />
+            <rect x={x + 6} y={y + 4} width={w - 12} height={h - 8} rx={2} fill="url(#r101-reactorGrad)" stroke={isActive ? "rgba(23,43,86,0.7)" : "rgba(23,43,86,0.2)"} strokeWidth={isActive ? 1.5 : 0.8} filter={isActive ? "url(#r101-glow8)" : undefined} className="transition-all duration-300" />
+            <ellipse cx={x + w - 6} cy={cy} rx={6} ry={h * 0.35} fill="url(#r101-reactorGrad)" stroke="rgba(23,43,86,0.2)" strokeWidth={0.8} />
             {[0, 1, 2].map(i => (
-              <line key={i} x1={x + 12} y1={y + 10 + i * 10} x2={x + w - 12} y2={y + 10 + i * 10} stroke="rgba(91,154,139,0.08)" strokeWidth={0.5} strokeDasharray="2 2" />
+              <line key={i} x1={x + 12} y1={y + 10 + i * 10} x2={x + w - 12} y2={y + 10 + i * 10} stroke="rgba(23,43,86,0.08)" strokeWidth={0.5} strokeDasharray="2 2" />
             ))}
             <circle cx={x + 8} cy={y - 2} r={3} fill="url(#r101-h2Grad)" opacity={0.7}>
               <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite" />
@@ -146,9 +146,9 @@ export default function Refinery101Section() {
       case "iso":
         return (
           <g>
-            <ellipse cx={cx} cy={y + 5} rx={w * 0.38} ry={5} fill="url(#r101-reactorGrad)" stroke="rgba(91,154,139,0.2)" strokeWidth={0.8} />
-            <rect x={x + 6} y={y + 5} width={w - 12} height={h - 10} rx={3} fill="url(#r101-reactorGrad)" stroke={isActive ? "rgba(91,154,139,0.7)" : "rgba(91,154,139,0.2)"} strokeWidth={isActive ? 1.5 : 0.8} filter={isActive ? "url(#r101-glow8)" : undefined} className="transition-all duration-300" />
-            <ellipse cx={cx} cy={y + h - 5} rx={w * 0.38} ry={4} fill="rgba(91,154,139,0.04)" stroke="rgba(91,154,139,0.15)" strokeWidth={0.8} />
+            <ellipse cx={cx} cy={y + 5} rx={w * 0.38} ry={5} fill="url(#r101-reactorGrad)" stroke="rgba(23,43,86,0.2)" strokeWidth={0.8} />
+            <rect x={x + 6} y={y + 5} width={w - 12} height={h - 10} rx={3} fill="url(#r101-reactorGrad)" stroke={isActive ? "rgba(23,43,86,0.7)" : "rgba(23,43,86,0.2)"} strokeWidth={isActive ? 1.5 : 0.8} filter={isActive ? "url(#r101-glow8)" : undefined} className="transition-all duration-300" />
+            <ellipse cx={cx} cy={y + h - 5} rx={w * 0.38} ry={4} fill="rgba(23,43,86,0.04)" stroke="rgba(23,43,86,0.15)" strokeWidth={0.8} />
             <path d={`M ${cx - 8},${cy - 4} L ${cx},${cy - 8} L ${cx + 8},${cy - 4}`} fill="none" stroke="rgba(134,239,172,0.4)" strokeWidth={1} />
             <path d={`M ${cx - 10},${cy + 4} L ${cx - 4},${cy} L ${cx + 4},${cy} L ${cx + 10},${cy + 4}`} fill="none" stroke="rgba(134,239,172,0.4)" strokeWidth={1} />
             <circle cx={cx} cy={cy - 2} r={2} fill="#86efac" opacity={0.3}>
@@ -233,8 +233,8 @@ export default function Refinery101Section() {
       default:
         return (
           <g>
-            <rect x={x} y={y} width={w} height={h} rx={6} fill="rgba(15,23,42,0.7)" stroke={isActive ? "rgba(91,154,139,0.7)" : "rgba(91,154,139,0.2)"} strokeWidth={isActive ? 2 : 1} filter={isActive ? "url(#r101-glow8)" : undefined} className="transition-all duration-300" />
-            {isActive && <rect x={x} y={y} width={w} height={h} rx={6} fill="rgba(91,154,139,0.06)" />}
+            <rect x={x} y={y} width={w} height={h} rx={6} fill="rgba(15,23,42,0.7)" stroke={isActive ? "rgba(23,43,86,0.7)" : "rgba(23,43,86,0.2)"} strokeWidth={isActive ? 2 : 1} filter={isActive ? "url(#r101-glow8)" : undefined} className="transition-all duration-300" />
+            {isActive && <rect x={x} y={y} width={w} height={h} rx={6} fill="rgba(23,43,86,0.06)" />}
             <text x={cx} y={cy + 1} textAnchor="middle" dominantBaseline="central" className="refinery-unit-label" fontSize={7}>{label}</text>
           </g>
         );
@@ -269,11 +269,11 @@ export default function Refinery101Section() {
                   <stop offset="0%" stopColor="#f97316" /><stop offset="50%" stopColor="#fbbf24" /><stop offset="100%" stopColor="#fef3c7" />
                 </linearGradient>
                 <linearGradient id="r101-towerGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="rgba(91,154,139,0.15)" /><stop offset="100%" stopColor="rgba(91,154,139,0.03)" />
+                  <stop offset="0%" stopColor="rgba(23,43,86,0.15)" /><stop offset="100%" stopColor="rgba(23,43,86,0.03)" />
                 </linearGradient>
                 <radialGradient id="r101-steamGrad"><stop offset="0%" stopColor="white" stopOpacity="0.15" /><stop offset="100%" stopColor="white" stopOpacity="0" /></radialGradient>
                 <linearGradient id="r101-reactorGrad" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="rgba(91,154,139,0.12)" /><stop offset="50%" stopColor="rgba(91,154,139,0.08)" /><stop offset="100%" stopColor="rgba(91,154,139,0.12)" />
+                  <stop offset="0%" stopColor="rgba(23,43,86,0.12)" /><stop offset="50%" stopColor="rgba(23,43,86,0.08)" /><stop offset="100%" stopColor="rgba(23,43,86,0.12)" />
                 </linearGradient>
                 <linearGradient id="r101-heatGrad" x1="0" y1="1" x2="0" y2="0">
                   <stop offset="0%" stopColor="#ea580c" stopOpacity="0.4" /><stop offset="100%" stopColor="#fbbf24" stopOpacity="0.1" />
@@ -312,13 +312,13 @@ export default function Refinery101Section() {
               </g>
 
               <g className={`refinery-unit ${show(1) ? "refinery-revealed" : "refinery-hidden"}`} onMouseEnter={() => setActiveUnit("atm")} onMouseLeave={() => setActiveUnit(null)} tabIndex={0} role="img" aria-label="Atmospheric distillation column">
-                <ellipse cx={115} cy={75} rx={28} ry={8} fill="url(#r101-towerGrad)" stroke="rgba(91,154,139,0.25)" strokeWidth={1} />
-                <rect x={87} y={75} width={56} height={195} rx={2} fill="url(#r101-towerGrad)" stroke="rgba(91,154,139,0.25)" strokeWidth={1} className={activeUnit === "atm" ? "refinery-unit-active" : ""} />
-                <ellipse cx={115} cy={270} rx={28} ry={6} fill="rgba(91,154,139,0.06)" stroke="rgba(91,154,139,0.2)" strokeWidth={1} />
+                <ellipse cx={115} cy={75} rx={28} ry={8} fill="url(#r101-towerGrad)" stroke="rgba(23,43,86,0.25)" strokeWidth={1} />
+                <rect x={87} y={75} width={56} height={195} rx={2} fill="url(#r101-towerGrad)" stroke="rgba(23,43,86,0.25)" strokeWidth={1} className={activeUnit === "atm" ? "refinery-unit-active" : ""} />
+                <ellipse cx={115} cy={270} rx={28} ry={6} fill="rgba(23,43,86,0.06)" stroke="rgba(23,43,86,0.2)" strokeWidth={1} />
                 {Array.from({length: 8}).map((_, i) => (
                   <g key={i}>
-                    <line x1={92} y1={95 + i * 22} x2={138} y2={95 + i * 22} stroke="rgba(91,154,139,0.12)" strokeWidth={0.7} />
-                    <circle cx={115} cy={95 + i * 22} r={1.5} fill="#5B9A8B" opacity={0.3}>
+                    <line x1={92} y1={95 + i * 22} x2={138} y2={95 + i * 22} stroke="rgba(23,43,86,0.12)" strokeWidth={0.7} />
+                    <circle cx={115} cy={95 + i * 22} r={1.5} fill="#172b56" opacity={0.3}>
                       <animate attributeName="opacity" values="0.15;0.5;0.15" dur={`${1.5 + i * 0.2}s`} repeatCount="indefinite" begin={`${i * 0.15}s`} />
                       <animate attributeName="r" values="1;2.5;1" dur={`${1.5 + i * 0.2}s`} repeatCount="indefinite" begin={`${i * 0.15}s`} />
                     </circle>
@@ -336,11 +336,11 @@ export default function Refinery101Section() {
               </g>
 
               <g className={`refinery-unit ${show(2) ? "refinery-revealed" : "refinery-hidden"}`} onMouseEnter={() => setActiveUnit("vac")} onMouseLeave={() => setActiveUnit(null)} tabIndex={0} role="img" aria-label="Vacuum distillation column">
-                <ellipse cx={115} cy={335} rx={22} ry={6} fill="url(#r101-towerGrad)" stroke="rgba(91,154,139,0.2)" strokeWidth={1} />
-                <rect x={93} y={335} width={44} height={100} rx={2} fill="url(#r101-towerGrad)" stroke="rgba(91,154,139,0.2)" strokeWidth={1} className={activeUnit === "vac" ? "refinery-unit-active" : ""} />
-                <ellipse cx={115} cy={435} rx={22} ry={5} fill="rgba(91,154,139,0.04)" stroke="rgba(91,154,139,0.15)" strokeWidth={1} />
+                <ellipse cx={115} cy={335} rx={22} ry={6} fill="url(#r101-towerGrad)" stroke="rgba(23,43,86,0.2)" strokeWidth={1} />
+                <rect x={93} y={335} width={44} height={100} rx={2} fill="url(#r101-towerGrad)" stroke="rgba(23,43,86,0.2)" strokeWidth={1} className={activeUnit === "vac" ? "refinery-unit-active" : ""} />
+                <ellipse cx={115} cy={435} rx={22} ry={5} fill="rgba(23,43,86,0.04)" stroke="rgba(23,43,86,0.15)" strokeWidth={1} />
                 {Array.from({length: 4}).map((_, i) => (
-                  <line key={i} x1={97} y1={355 + i * 22} x2={133} y2={355 + i * 22} stroke="rgba(91,154,139,0.1)" strokeWidth={0.7} />
+                  <line key={i} x1={97} y1={355 + i * 22} x2={133} y2={355 + i * 22} stroke="rgba(23,43,86,0.1)" strokeWidth={0.7} />
                 ))}
                 <text x={115} y={385} textAnchor="middle" className="refinery-unit-label" fontSize={7}>VACUUM</text>
                 <text x={115} y={395} textAnchor="middle" className="refinery-unit-label" fontSize={7}>DIST</text>
@@ -390,7 +390,7 @@ export default function Refinery101Section() {
               ))}
 
               <g className={show(1) ? "refinery-revealed" : "refinery-hidden"}>
-                <text x={5} y={15} fill="#5B9A8B" fontSize={9} fontWeight={800} opacity={0.5} letterSpacing="0.1em">1 SEPARATION</text>
+                <text x={5} y={15} fill="#172b56" fontSize={9} fontWeight={800} opacity={0.5} letterSpacing="0.1em">1 SEPARATION</text>
               </g>
               <g className={show(3) ? "refinery-revealed" : "refinery-hidden"}>
                 <text x={245} y={15} fill="#f97316" fontSize={9} fontWeight={800} opacity={0.5} letterSpacing="0.1em">2 CONVERSION &amp; TREATMENT</text>

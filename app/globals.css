@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #1B2838;
+  --background: #f7f8fa;
+  --foreground: #172b56;
 }
 
 html {
@@ -107,14 +107,14 @@ body {
 
 .hero-grid {
   background-image:
-    linear-gradient(rgba(91, 154, 139, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(91, 154, 139, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(23, 43, 86, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 43, 86, 0.06) 1px, transparent 1px);
   background-size: 60px 60px;
   animation: gridPulse 4s ease-in-out infinite;
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #5B9A8B 0%, #2dd4bf 50%, #5B9A8B 100%);
+  background: linear-gradient(135deg, #172b56 0%, #3b5998 50%, #172b56 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -145,7 +145,7 @@ body {
 
 .landing-card-dark:hover {
   @apply border-primary-500/30;
-  box-shadow: 0 0 30px rgba(91, 154, 139, 0.1);
+  box-shadow: 0 0 30px rgba(23, 43, 86, 0.1);
 }
 
 .stat-number {
@@ -157,7 +157,7 @@ body {
   @apply mx-auto;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #5B9A8B, #2dd4bf);
+  background: linear-gradient(90deg, #172b56, #3b5998);
   border-radius: 2px;
 }
 
@@ -196,8 +196,8 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5B9A8B;
-  box-shadow: 0 0 8px rgba(91, 154, 139, 0.6), 0 0 20px rgba(91, 154, 139, 0.3);
+  background: #172b56;
+  box-shadow: 0 0 8px rgba(23, 43, 86, 0.6), 0 0 20px rgba(23, 43, 86, 0.3);
   pointer-events: none;
 }
 
@@ -213,7 +213,7 @@ body {
   width: 3px;
   height: 3px;
   border-radius: 50%;
-  background: rgba(91, 154, 139, 0.12);
+  background: rgba(23, 43, 86, 0.12);
 }
 
 .scan-beam {
@@ -224,16 +224,16 @@ body {
   background: linear-gradient(
     180deg,
     transparent 0%,
-    rgba(91, 154, 139, 0.08) 30%,
-    rgba(45, 212, 191, 0.15) 50%,
-    rgba(91, 154, 139, 0.08) 70%,
+    rgba(23, 43, 86, 0.08) 30%,
+    rgba(59, 89, 152, 0.15) 50%,
+    rgba(23, 43, 86, 0.08) 70%,
     transparent 100%
   );
   pointer-events: none;
 }
 
 .ai-engine-glow {
-  border: 1px solid rgba(91, 154, 139, 0.2);
+  border: 1px solid rgba(23, 43, 86, 0.2);
   border-radius: 1.5rem;
 }
 
@@ -246,8 +246,8 @@ body {
     180deg,
     transparent 0px,
     transparent 8px,
-    rgba(91, 154, 139, 0.15) 8px,
-    rgba(91, 154, 139, 0.15) 16px
+    rgba(23, 43, 86, 0.15) 8px,
+    rgba(23, 43, 86, 0.15) 16px
   );
   background-size: 1px 40px;
   pointer-events: none;
@@ -261,8 +261,8 @@ body {
     180deg,
     transparent 0px,
     transparent 6px,
-    rgba(91, 154, 139, 0.4) 6px,
-    rgba(91, 154, 139, 0.4) 14px
+    rgba(23, 43, 86, 0.4) 6px,
+    rgba(23, 43, 86, 0.4) 14px
   );
   background-size: 2px 40px;
 }
@@ -273,7 +273,7 @@ body {
   margin: 0 auto;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-top: 10px solid rgba(91, 154, 139, 0.5);
+  border-top: 10px solid rgba(23, 43, 86, 0.5);
 }
 
 .pipeline-step-glow {
@@ -297,8 +297,8 @@ body {
     90deg,
     transparent 0px,
     transparent 6px,
-    rgba(91, 154, 139, 0.5) 6px,
-    rgba(91, 154, 139, 0.5) 14px
+    rgba(23, 43, 86, 0.5) 6px,
+    rgba(23, 43, 86, 0.5) 14px
   );
   background-size: 40px 3px;
 }
@@ -308,7 +308,7 @@ body {
   height: 0;
   border-top: 9px solid transparent;
   border-bottom: 9px solid transparent;
-  border-left: 12px solid rgba(91, 154, 139, 0.5);
+  border-left: 12px solid rgba(23, 43, 86, 0.5);
 }
 
 .flow-arrow-h-label {
@@ -350,8 +350,8 @@ body {
 }
 
 .refinery-unit-active {
-  stroke: rgba(91, 154, 139, 0.7) !important;
-  fill: rgba(91, 154, 139, 0.08) !important;
+  stroke: rgba(23, 43, 86, 0.7) !important;
+  fill: rgba(23, 43, 86, 0.08) !important;
 }
 
 .refinery-unit-label {

@@ -221,8 +221,8 @@ export default function LandingPage() {
               <Image
                 src="/optamax-logo.png"
                 alt="Optamax"
-                width={100}
-                height={58}
+                width={40}
+                height={40}
                 priority
                 className="h-10 w-auto object-contain"
               />
@@ -311,9 +311,10 @@ export default function LandingPage() {
             <Image
               src="/optamax-logo.png"
               alt="Optamax"
-              width={220}
-              height={128}
+              width={200}
+              height={200}
               priority
+              className="w-48 h-auto"
             />
           </div>
 

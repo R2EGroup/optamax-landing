@@ -82,7 +82,7 @@ export default function RefineryProcessSection() {
                   <stop offset="0%" stopColor="#b45309" /><stop offset="35%" stopColor="#f97316" /><stop offset="65%" stopColor="#22c55e" /><stop offset="100%" stopColor="#34d399" />
                 </linearGradient>
                 <linearGradient id="brainGrad" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stopColor="#5B9A8B" />
+                  <stop offset="0%" stopColor="#172b56" />
                   <stop offset="100%" stopColor="#3b82f6" />
                 </linearGradient>
                 <linearGradient id="rps-scanGrad" x1="0" y1="0" x2="1" y2="0">
@@ -100,7 +100,7 @@ export default function RefineryProcessSection() {
                   const dotX = 50 + (i % 10) * 105;
                   const dotY = 30 + Math.floor(i / 10) * 310;
                   return (
-                    <circle key={`bg-dot-${i}`} cx={dotX} cy={dotY} r="1.5" fill="#5B9A8B" opacity="0.08">
+                    <circle key={`bg-dot-${i}`} cx={dotX} cy={dotY} r="1.5" fill="#172b56" opacity="0.08">
                       <animate attributeName="opacity" values="0.04;0.15;0.04" dur={`${3 + (i % 4) * 0.5}s`} repeatCount="indefinite" begin={`${i * 0.3}s`} />
                       <animate attributeName="r" values="1;2.5;1" dur={`${3 + (i % 4) * 0.5}s`} repeatCount="indefinite" begin={`${i * 0.3}s`} />
                     </circle>
@@ -133,7 +133,7 @@ export default function RefineryProcessSection() {
                   const x2 = 550 + Math.cos(a2) * 20;
                   const y2 = 70 + Math.sin(a2) * 20;
                   return (
-                    <line key={`cross-${i}`} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#5B9A8B" strokeWidth="0.5" strokeOpacity="0.15" strokeDasharray="2 3">
+                    <line key={`cross-${i}`} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#172b56" strokeWidth="0.5" strokeOpacity="0.15" strokeDasharray="2 3">
                       <animate attributeName="strokeOpacity" values="0.08;0.2;0.08" dur={`${3 + i * 0.5}s`} repeatCount="indefinite" />
                     </line>
                   );
@@ -146,8 +146,8 @@ export default function RefineryProcessSection() {
                   const ny = 70 + Math.sin(angle) * 20;
                   return (
                     <g key={`neural-${i}`}>
-                      <line x1={550} y1={70} x2={nx} y2={ny} stroke="#5B9A8B" strokeWidth="1" strokeOpacity="0.3" />
-                      <circle cx={nx} cy={ny} r="2.5" fill="#5B9A8B" opacity="0.5">
+                      <line x1={550} y1={70} x2={nx} y2={ny} stroke="#172b56" strokeWidth="1" strokeOpacity="0.3" />
+                      <circle cx={nx} cy={ny} r="2.5" fill="#172b56" opacity="0.5">
                         <animate attributeName="opacity" values="0.3;0.7;0.3" dur={`${2 + i * 0.2}s`} repeatCount="indefinite" />
                       </circle>
                     </g>
@@ -161,7 +161,7 @@ export default function RefineryProcessSection() {
                 
                 {/* Labels */}
                 <text x={550} y={66} textAnchor="middle" fill="white" fontSize="10" fontWeight="700">Optamax</text>
-                <text x={550} y={78} textAnchor="middle" fill="#5B9A8B" fontSize="7" fontWeight="600">ORCHESTRATOR</text>
+                <text x={550} y={78} textAnchor="middle" fill="#172b56" fontSize="7" fontWeight="600">ORCHESTRATOR</text>
               </g>
 
               {/* ═══ DATA FLOW: VALUE CHAIN → BRAIN (3-layer pipes) ═══ */}
