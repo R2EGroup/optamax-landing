@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import {
+  siteUrl,
+  siteName,
+  siteTitle,
+  siteDescription,
+  siteAddress,
+  siteSocial,
+} from "@/lib/site";
 import "./globals.css";
 
-const siteUrl = "https://optamax.ai";
-const siteName = "Optamax";
-const siteTitle = "Optamax | The Energy Operating System";
-const siteDescription =
-  "AI-powered decision intelligence for downstream refinery operations. Optamax converts 20+ years of elite energy advisory expertise into an on-demand operating system — delivering billions in margin lift across clients worldwide.";
+const googleVerification = process.env.GOOGLE_SITE_VERIFICATION;
+const bingVerification = process.env.BING_SITE_VERIFICATION;
 
 export const metadata: Metadata = {
   title: {
@@ -43,9 +48,9 @@ export const metadata: Metadata = {
     "energy advisory",
   ],
 
-  authors: [{ name: "Optamax", url: "https://optamax.ai" }],
-  creator: "Optamax",
-  publisher: "Optamax",
+  authors: [{ name: siteName, url: siteUrl }],
+  creator: siteName,
+  publisher: siteName,
 
   robots: {
     index: true,
@@ -66,24 +71,17 @@ export const metadata: Metadata = {
     siteName,
     title: siteTitle,
     description: siteDescription,
-    images: [
-      {
-        url: `${siteUrl}/optamax-logo.png`,
-        width: 937,
-        height: 546,
-        alt: "Optamax - The Energy Operating System",
-        type: "image/png",
-      },
-    ],
+    // next/og file convention generates /opengraph-image automatically;
+    // no manual images array needed — Next 15 picks it up.
   },
 
   twitter: {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
-    images: [`${siteUrl}/optamax-logo.png`],
-    creator: "@Optamax",
-    site: "@Optamax",
+    creator: siteSocial.twitter,
+    site: siteSocial.twitter,
+    // next/og file convention generates /twitter-image automatically.
   },
 
   icons: {
@@ -98,9 +96,38 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical: siteUrl,
+    languages: {
+      "en-US": siteUrl,
+    },
   },
 
   category: "Technology",
+
+  // Geo meta tags for geographic targeting
+  other: {
+    "geo.region": `${siteAddress.country}-${siteAddress.region}`,
+    "geo.placename": siteAddress.city,
+    "geo.position": `${siteAddress.latitude};${siteAddress.longitude}`,
+    ICBM: `${siteAddress.latitude}, ${siteAddress.longitude}`,
+    ...(googleVerification
+      ? { "google-site-verification": googleVerification }
+      : {}),
+    ...(bingVerification
+      ? { "msvalidate.01": bingVerification }
+      : {}),
+  },
+
+  // manifest.ts is picked up automatically by Next via file convention
+  manifest: "/manifest.webmanifest",
+
+  ...(googleVerification || bingVerification
+    ? {
+        verification: {
+          ...(googleVerification ? { google: googleVerification } : {}),
+          ...(bingVerification ? { other: { "msvalidate.01": bingVerification } } : {}),
+        },
+      }
+    : {}),
 };
 
 export default function RootLayout({

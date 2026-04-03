@@ -112,96 +112,6 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-white text-navy-900 overflow-x-hidden">
-      {/* ── JSON-LD Structured Data for SEO ── */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "Organization",
-                "@id": "https://optamax.ai/#organization",
-                name: "Optamax",
-                url: "https://optamax.ai",
-                logo: "https://optamax.ai/optamax-logo.png",
-                description:
-                  "Optamax is a global energy advisory firm founded in 2005. Advisors average 25+ years of experience in oil & gas operations, strategy, consulting, and executive management.",
-                foundingDate: "2005",
-                address: {
-                  "@type": "PostalAddress",
-                  streetAddress: "2245 Texas Drive, Suite 300",
-                  addressLocality: "Sugar Land",
-                  addressRegion: "TX",
-                  postalCode: "77479",
-                  addressCountry: "US",
-                },
-                contactPoint: {
-                  "@type": "ContactPoint",
-                  telephone: "+1-281-220-1083",
-                  email: "contact@optamax.ai",
-                  contactType: "sales",
-                },
-                sameAs: [
-                  "https://www.linkedin.com/company/optamax",
-                  "https://www.linkedin.com/company/optamax",
-                ],
-              },
-              {
-                "@type": "SoftwareApplication",
-                name: "Optamax",
-                applicationCategory: "BusinessApplication",
-                operatingSystem: "Web",
-                description:
-                  "AI-powered decision intelligence platform for downstream refinery operations. Converts 20+ years of elite energy advisory expertise into on-demand operational intelligence.",
-                url: "https://optamax.ai",
-                provider: { "@id": "https://optamax.ai/#organization" },
-                offers: {
-                  "@type": "Offer",
-                  price: "0",
-                  priceCurrency: "USD",
-                  description: "Contact for enterprise pricing",
-                },
-              },
-              {
-                "@type": "WebSite",
-                url: "https://optamax.ai",
-                name: "Optamax",
-                publisher: { "@id": "https://optamax.ai/#organization" },
-              },
-              {
-                "@type": "FAQPage",
-                mainEntity: [
-                  {
-                    "@type": "Question",
-                    name: "What is Optamax?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Optamax is the Refinery Operating System — an AI-powered decision intelligence platform that converts 20+ years of elite refinery advisory expertise into on-demand operational intelligence for downstream operations.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "How does Optamax improve refinery operations?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Optamax ingests unstructured refinery data, maps it to proven decision frameworks developed over decades, executes decisions with human-in-the-loop control, and continuously learns from live production outcomes.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "What results has Optamax delivered?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Optamax has delivered billions in operational margin lift across clients, including $500M+/yr in manufacturing transformation, $300M+/yr in value chain transformation, and $200M+ in inventory optimization.",
-                    },
-                  },
-                ],
-              },
-            ],
-          }),
-        }}
-      />
       {/* ================================================================
           NAVBAR
           ================================================================ */}
@@ -283,6 +193,7 @@ export default function LandingPage() {
         )}
       </nav>
 
+      <main id="main-content">
       {/* ================================================================
           HERO
           ================================================================ */}
@@ -1429,6 +1340,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+      </main>
     </div>
   );
 }
